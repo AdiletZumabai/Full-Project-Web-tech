@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="src/icons8-film-reel-16.png" type="image/x-icon">
+    <title>MovieScreen - Purchase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="purchase.css">
+</head>
+<body>
+   
+
+    <div class="container mt-5">
+        <h2>Purchase Details</h2>
+        <form>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+    
+            <div class="mb-3">
+                <label for="totalPrice" class="form-label">Total Price</label>
+                <input type="text" class="form-control" id="totalPrice" placeholder="Total price" readonly>
+            </div>
+    
+            <div class="mb-3">
+                <label for="paymentMethod" class="form-label">Payment Method</label>
+                <select class="form-select" id="paymentMethod" required>
+                    <option value="" selected disabled>Select payment method</option>
+                    <option value="kaspi">Kaspi QR</option>
+                    <option value="halyk">Halyk Bank</option>
+                </select>
+            </div>
+    
+            <button type="button" class="btn btn-primary" onclick="validateAndCompletePurchase()">Complete Purchase</button>
+        </form>
+    </div>
+    
+    <div class="modal" id="purchaseModal">
+        <div class="modal-content">
+            <h3>Purchase Complete</h3>
+            <p>Your purchase has been completed successfully!</p>
+            <button type="button" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="js/eventlist.js"></script>
+
+</body>
+</html>

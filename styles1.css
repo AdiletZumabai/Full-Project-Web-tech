@@ -1,0 +1,13 @@
+.seat-info {
+    display: none;
+}
+.list-group-item:hover .seat-info {
+    display: block;
+}
+.selected {
+    background-color: #007bff;
+    color: #fff;
+}
+.proceed {
+    margin-bottom: 65px;
+}

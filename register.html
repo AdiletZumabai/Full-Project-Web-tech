@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+<div id="form-container">
+  <div class="form-step active" id="register-step">
+    <h2>Register</h2>
+    <form id="register-form">
+      <label for="new-username">New Username:</label>
+      <input type="text" id="new-username" required>
+      <br>
+      <label for="new-password">New Password:</label>
+      <input type="password" id="new-password" required>
+      <br>
+      <button type="button" class="next" onclick="nextStep()">Next</button>
+    </form>
+  </div>
+
+  <div class="form-step" id="login-step">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="login-username">Username:</label>
+      <input type="text" id="login-username" required>
+      <br>
+      <label for="login-password">Password:</label>
+      <input type="password" id="login-password" required>
+      <br>
+      <button type="button" class="prev" onclick="prevStep()">Previous</button>
+      <button type="button" class="next" onclick="validateLogin()">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/form.js"></script>
+
+</body>
+</html>
